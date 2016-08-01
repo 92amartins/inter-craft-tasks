@@ -2,6 +2,8 @@
 
 namespace App\Policies;
 
+use App\User;
+use App\Task;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class TaskPolicy
@@ -20,6 +22,7 @@ class TaskPolicy
     
     /**
      * Check user ownership over task
+     *
      * @param User $user
      * @param Task $task
      * @return bool
